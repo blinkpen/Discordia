@@ -65,13 +65,13 @@ namespace Discordia
         private async Task CommandHandler(SocketMessage message)
         {
             //Global Role Variables
-            SocketGuild guild0 = _client.GetGuild(793087550314774572);//guild          
-            SocketRole adminRole = guild0.GetRole(793093176000643112);//admin role
-            SocketRole wizardRole = guild0.GetRole(793088360814084147);//wizard role
-            SocketRole witchRole = guild0.GetRole(793089716278657056);//witch role
-            SocketRole mageRole = guild0.GetRole(793088755044319233);//mage role
-            SocketRole nightWalkerRole = guild0.GetRole(793089225196175370);//nightwalker role
-            SocketRole warriorRole = guild0.GetRole(793088862033149992);//warrior role
+            SocketGuild guild0 = _client.GetGuild(your guild id);//guild          
+            SocketRole adminRole = guild0.GetRole(admin role id);//admin role
+            SocketRole wizardRole = guild0.GetRole(wizard role id);//wizard role
+            SocketRole witchRole = guild0.GetRole(witch role id);//witch role
+            SocketRole mageRole = guild0.GetRole(mage role id);//mage role
+            SocketRole nightWalkerRole = guild0.GetRole(nightwalker role id);//nightwalker role
+            SocketRole warriorRole = guild0.GetRole(warrior role id);//warrior role
             SocketGuildUser user0 = guild0.GetUser(message.Author.Id);//user that sent message
 
         
@@ -132,7 +132,7 @@ namespace Discordia
             {               
                 warrior.strength = 10;
                 warrior.AttackMelee();
-                await message.Channel.SendMessageAsync($"{proNoun} beat ass with {warrior.strength} damage.");
+                await message.Channel.SendMessageAsync($"{proNoun} beat monster with {warrior.strength} damage.");
             }
 
             if(command == "hurt")
@@ -149,6 +149,11 @@ namespace Discordia
             if (!(user0.Roles.Contains(adminRole))) { return; }//only admin can use commands after this
             //admin commands
 
+            if (command == "admin")
+            {
+                'do something
+            }
+              
 
         }
 
@@ -161,16 +166,16 @@ namespace Discordia
             //    if (reaction.Emote.Name == "😵")
             //    {
             //        var user = ((IGuildUser)reaction.User.Value);
-            //        var role = ((ITextChannel)channel).Guild.GetRole(785872551896940544); //psychonaut role
+            //        var role = ((ITextChannel)channel).Guild.GetRole(role id); //whatever role
             //        await user.AddRoleAsync(role);
             //    }
 
             //    if (reaction.Emote.Name == "👩")
             //    {
             //        var user = ((IGuildUser)reaction.User.Value);
-            //        //var role0 = ((ITextChannel)channel).Guild.GetRole(785871999322947604); //male role
+            //        //var role0 = ((ITextChannel)channel).Guild.GetRole(male role id); //male role
             //        //await user.RemoveRoleAsync(role0);
-            //        var role = ((ITextChannel)channel).Guild.GetRole(785872194650898502); //female role
+            //        var role = ((ITextChannel)channel).Guild.GetRole(female role id); //female role
             //        await user.AddRoleAsync(role);
 
             //        var emote0 = new Emoji("👨");
@@ -181,9 +186,9 @@ namespace Discordia
             //    if (reaction.Emote.Name == "👨")
             //    {
             //        var user = ((IGuildUser)reaction.User.Value);
-            //        //var role0 = ((ITextChannel)channel).Guild.GetRole(785872194650898502); //female role
+            //        //var role0 = ((ITextChannel)channel).Guild.GetRole(female role id); //female role
             //        //await user.RemoveRoleAsync(role0);
-            //        var role = ((ITextChannel)channel).Guild.GetRole(785871999322947604); //male role
+            //        var role = ((ITextChannel)channel).Guild.GetRole(male role id); //male role
             //        await user.AddRoleAsync(role);
 
             //        var emote0 = new Emoji("👩");
@@ -195,48 +200,14 @@ namespace Discordia
             //    if (reaction.Emote.Name == strainCommand.Name)
             //    {
             //        var user = ((IGuildUser)reaction.User.Value);
-            //        var role = ((ITextChannel)channel).Guild.GetRole(788390195418103849); //straincommand role
+            //        var role = ((ITextChannel)channel).Guild.GetRole(whatever role id); //whatever role
             //        await user.AddRoleAsync(role);
             //    }
 
             //}
         }
 
-        //REMOVE ROLE BY REACTION
-        public static async Task RemoveReactEvent(Cacheable<IUserMessage, ulong> message, ISocketMessageChannel channel, SocketReaction reaction)
-        {
-            //if (message.Id == 788423261041983508)
-            //{
-            //    if (reaction.Emote.Name == "😵")
-            //    {
-            //        var user = ((IGuildUser)reaction.User.Value);
-            //        var role = ((ITextChannel)channel).Guild.GetRole(785872551896940544); //psychonaut role
-            //        await user.RemoveRoleAsync(role);
-            //    }
-
-            //    if (reaction.Emote.Name == "👩")
-            //    {
-            //        var user = ((IGuildUser)reaction.User.Value);
-            //        var role = ((ITextChannel)channel).Guild.GetRole(785872194650898502); //female role
-            //        await user.RemoveRoleAsync(role);
-            //    }
-
-            //    if (reaction.Emote.Name == "👨")
-            //    {
-            //        var user = ((IGuildUser)reaction.User.Value);
-            //        var role = ((ITextChannel)channel).Guild.GetRole(785871999322947604); //male role
-            //        await user.RemoveRoleAsync(role);
-            //    }
-
-            //    Emote strainCommand = Emote.Parse("<:drechronic:787941399534108732>");
-            //    if (reaction.Emote.Name == strainCommand.Name)
-            //    {
-            //        var user = ((IGuildUser)reaction.User.Value);
-            //        var role = ((ITextChannel)channel).Guild.GetRole(788390195418103849); //straincommand role
-            //        await user.RemoveRoleAsync(role);
-            //    }  
-                
-            }
+      
         }
 
 
