@@ -1,0 +1,2 @@
+# Discordia
+ Discord RPG bot
